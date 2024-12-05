@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
         progressAmount = 0;
         progressSlider.value = 0;
         MachineParts.OnGearCollect += IncreaseProgressAmount;
+        HoldToLoadLevel.OnHoldComplete += LoadNextLevel;
     }
 
     void IncreaseProgressAmount(int amount) {
@@ -24,6 +25,10 @@ public class GameController : MonoBehaviour
             //level finished
             Debug.Log("level complete");
         }
+    }
+
+    void LoadNextLevel() {
+
     }
 
     // Update is called once per frame
