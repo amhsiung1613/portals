@@ -10,6 +10,7 @@ public class MachineParts : MonoBehaviour, IItem
 
     public void Collect() {
         OnGearCollect.Invoke(worth);
+        SoundEffectManager.Play("Gear");
         Destroy(gameObject);
     }
    
