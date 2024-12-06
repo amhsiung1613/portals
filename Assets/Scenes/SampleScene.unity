@@ -1707,6 +1707,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 72
+  damage: 1
 --- !u!50 &583510329
 Rigidbody2D:
   serializedVersion: 4
@@ -7634,6 +7635,7 @@ GameObject:
   - component: {fileID: 1112982986}
   - component: {fileID: 1112982988}
   - component: {fileID: 1112982987}
+  - component: {fileID: 1112982989}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7892,7 +7894,7 @@ MonoBehaviour:
   rb: {fileID: 1112982982}
   smokeFX: {fileID: 631489653}
   moveSpeed: 5
-  jumpPower: 15
+  jumpPower: 25
   maxJumps: 2
   groundCheckPos: {fileID: 595579004}
   groundCheckSize: {x: 1, y: 0.05}
@@ -7937,6 +7939,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b695871a7f009342956095bc4cc38a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1112982989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112982980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f380bc0711e7f65479a168e83974fa2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  healthUI: {fileID: 1943465477}
 --- !u!1001 &1127643979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10481,6 +10497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943465475}
   - component: {fileID: 1943465476}
+  - component: {fileID: 1943465477}
   m_Layer: 5
   m_Name: HeartContainer
   m_TagString: Untagged
@@ -10505,7 +10522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -884, y: 425}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1943465476
@@ -10534,6 +10551,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1943465477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943465474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a7940d5590e5e42a98c8910cadef77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartPrefab: {fileID: 1208736977595608724, guid: 6bf74596f78dbd64591c910c0ff21983, type: 3}
+  fullHeartSprite: {fileID: 21300000, guid: 660f50956c1dc4642afbfb6e86ea8a0e, type: 3}
+  emptyHeartSprite: {fileID: 21300000, guid: b4c345197fab25445b482a849ba28bff, type: 3}
 --- !u!4 &1946783376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 241693536743307672, guid: ad23a4dd2612d434b9e498b2fc19b37a, type: 3}
@@ -10639,6 +10671,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 72
+  damage: 1
 --- !u!50 &2032467519
 Rigidbody2D:
   serializedVersion: 4
