@@ -1702,8 +1702,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1112982984}
-  chaseSpeed: 2
-  jumpForce: 3
+  chaseSpeed: 3
+  jumpForce: 2
   groundLayer:
     serializedVersion: 2
     m_Bits: 72
@@ -10634,8 +10634,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1112982984}
-  chaseSpeed: 2
-  jumpForce: 3
+  chaseSpeed: 3
+  jumpForce: 2
   groundLayer:
     serializedVersion: 2
     m_Bits: 72
